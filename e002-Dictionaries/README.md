@@ -74,30 +74,44 @@
     ```
 
 
-#### Delete items
+#### Functionalities
 
 - <strong> del and .pop(key) </strong>
+    
     - allows you to delete individual elements of a dictionary by its key.
     
+    ```
+    print(mix_dictionary)
+    del mix_dictionary["key3"]
+    # mix_dictionary.pop("key3")
+    print(mix_dictionary)
+    
+    """
+    Output:
+        {'key1': 'value1', 'key2': 2, 'key3': {'key1': 'innerValue', 2: 5}}
+        {'key1': 'value1', 'key2': 2}
+    """
+    ```
+    
+    
+    
 - <strong>.clear()</strong>
+    
     - removes all elements of a dictionary.   
  
-```
-del mix_dictionary["key3"]
-# mix_dictionary.pop("key3")
-print(mix_dictionary)
-mix_dictionary.clear()
-print(mix_dictionary)
+    ```
+    print(mix_dictionary)
+    mix_dictionary.clear()
+    print(mix_dictionary)
+    
+    """
+    Output:
+        {'key1': 'value1', 'key2': 2}
+        {}
+    """
+    ```
 
-"""
-Output:
-    {'key1': 'value1', 'key2': 2}
-    {}
-"""
-```
 
- 
-#### Other functionalities
 
 - <strong> len </strong> 
     
@@ -154,14 +168,6 @@ Output:
 - <strong> .fromkeys(list, defaultValue) </strong>
     
     - Create a new dictionary by putting the ones in the list as keys and the default values if you miss them
-    ```
-    
-    ```
-
-
-- <strong> dict.has_key(key) </strong>
-    
-    - Returns true if the key exists. But it returns false
     ```
     keys = {'a', 'e', 'i', 'o', 'u' }
     dict2 = dict.fromkeys(keys)
