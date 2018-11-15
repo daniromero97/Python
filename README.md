@@ -41,10 +41,10 @@
         - index
         - in
     - List operators
-        - +
-        - +=
-        - *
-        - *=
+        - "+"
+        - "+="
+        - "*"
+        - "*="
     - Other functionalities
         - count
         - reverse
