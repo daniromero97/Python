@@ -23,3 +23,30 @@
         - .copy()
         - .fromkeys(list, defaultValue)
         - dict.update(dict2)
+
+- (3) Lists
+    - What are they?
+    - Negative indexes
+    - Slicing
+    - Shortcuts
+    - Add items
+        - append
+        - extend
+        - insert
+    - Delete items
+        - remove
+        - del
+        - pop
+    - Search items
+        - index
+        - in
+    - List operators
+        - +
+        - +=
+        - *
+        - *=
+    - Other functionalities
+        - count
+        - reverse
+        - min and max
+        - clear
