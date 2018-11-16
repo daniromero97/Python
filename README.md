@@ -50,3 +50,11 @@
         - reverse
         - min and max
         - clear
+ - (4) Tuples
+    - What are the tuples and comparison with lists
+    - Applications
+        - index and in
+        - len and count
+        - max and min
+        - list and tuple
+    
