@@ -57,4 +57,14 @@
         - len and count
         - max and min
         - list and tuple
-    
+ - (5) Control Flow Statements
+    - Basic things
+        - Indentation
+        - Encoding
+        - Multiple assignment
+    - Conditional Statements
+        - Relational operators
+        - Logical operators
+        - if Statement
+        - else Statement
+        - elif Statement
