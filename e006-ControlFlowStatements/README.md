@@ -70,4 +70,18 @@
     """
     ```
     
-- Later we will see more uses.
+- Another way to iterate with the for loop that can emulate the while loop:
+
+    ```
+    for num in range(0, 5):
+        print(num)
+    
+    """
+    Output:
+        0
+        1
+        2
+        3
+        4
+    """
+    ```    
