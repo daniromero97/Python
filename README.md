@@ -75,3 +75,11 @@
 - (7) Strings format
     - String format vs. concatenation
     - Number format
+- (8) Modules and packages
+    - Import modules
+    - Namespaces
+    - Alias
+    - Import modules without namespaces
+    - Good practices
+    - Something not recommended
+    - Example
