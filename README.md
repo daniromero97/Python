@@ -72,3 +72,6 @@
     - Iterative Statements
         - While loop
         - For loop
+- (7) Strings format
+    - String format vs. concatenation
+    - Number format
