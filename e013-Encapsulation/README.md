@@ -19,8 +19,6 @@
     ```    
 
 - In this way we can no longer access the attributes from outside the class.
-- In python it is not totally effective, because if we know the name of the attribute if we can "modify" it.
-- In python all methods and attributes are public. By convention, they are said to be private when they start with double underscore.
 
     ```
     p1 = Person("Gonzalo", 1.78, 74, 25)
@@ -38,7 +36,8 @@
     """    
     ```
 
--     
+- In python it is not totally effective, because if we know the name of the attribute if we can "modify" it.
+- In python all methods and attributes are public. By convention, they are said to be private when they start with double underscore.   
     
 
     
