@@ -3,7 +3,7 @@
 - Recursive functions are functions that call themselves.
 - They should be used in specific cases since it is easy to fall into an infinite iteration.
 
-#### Example calculate the factorial of a number
+#### Example: calculate the factorial of a number
 
 ```
 def factorial(n):
@@ -36,7 +36,8 @@ output:
 """
 ```
 
-#### Example calculate the factorial of a number
+#### Example: Fibonacci succession of a number
+
 ```
 def fibonacci(n):
     if(n<2):
