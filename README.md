@@ -1,6 +1,5 @@
 # Python 
 
-### Bases
 - (1) Introduction
     - Identifiers
     - Reserved words
@@ -83,3 +82,31 @@
     - Good practices
     - Something not recommended
     - Example
+- (9) Functions
+    - What are they?
+    - Parameters
+    - Default parameters
+    - Keywords as parameters
+    - Arbitrary parameters
+    - Unpacking of parameters
+- (10) Functions
+    - Return calls
+    - How to know if a function exists
+- (11) Recursion
+- (12) Introduction to object oriented programming (OOP)
+- (13) Encapsulation
+- (14) Inheritance
+    - To inherit from another class
+    - Overload of methods
+    - super()
+- (15) Multiple inheritance
+- (16) Polymorphism
+- (17) OOP Functions
+    - issubclass
+    - isinstance
+    - dir
+    - vars
+    - getattr
+    - setattr
+    - delattr
+    
