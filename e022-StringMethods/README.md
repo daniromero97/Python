@@ -134,3 +134,47 @@
         0000000000000000this IS a TEST sentence.
     """
     ```
+    
+    
+### Search methods    
+
+##### count()
+
+- Count the occurrences of a substring.
+
+    ```
+    print(sentence)
+    print(sentence.count("e"))
+    print(sentence.count("e", 20))
+    print(sentence.count("e", 15, 20))
+    
+    """
+    output:
+        this IS a TEST sentence.
+        3
+        1
+        2
+    """
+    ```
+    
+##### find()
+
+- Search for a substring within a string.   
+
+    ```
+    sentence *= 3
+    print(sentence)
+    print(sentence.find("this"))
+    print(sentence.find("this", 5))
+    print(sentence.find("this", 10))
+    print(sentence.find("this", 10, 20))
+    
+    """
+    output:
+        this IS a TEST sentence.this IS a TEST sentence.this IS a TEST sentence.
+        0
+        24
+        24
+        -1
+    """
+    ```   
