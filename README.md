@@ -109,4 +109,20 @@
     - getattr
     - setattr
     - delattr
-    
+- (18) Generators
+    - Functioning
+    - Utilities
+    - 'yield' expression
+    - Examples
+- (19) Generatos
+    - Instruction 'yield from'
+- (20) Exceptions
+    - What are they? 
+    - Exception control
+    - Control of more than one exception
+    - 'finally' expression
+- (21) Exceptions
+    - Own exceptions
+    - 'raise' expression
+    - Exceptions defined by the user
+    - 'assert' expression
