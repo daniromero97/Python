@@ -164,3 +164,23 @@
         - partition()
         - split()
         - splitlines()
+- (26) Files
+    - Introduction
+    - Open files
+    - Opening Modes
+    - Methods of file
+        - seek()
+        - read()
+        - readline()
+        - readlines()
+        - tell()
+        - write()
+        - writelines()
+        - close()
+    - File properties
+        - closed
+        - mode
+        - name
+        - encoding
+    - Automatic closing
+        - Use of "with"
