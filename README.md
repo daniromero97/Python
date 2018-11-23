@@ -125,4 +125,42 @@
     - Own exceptions
     - 'raise' expression
     - Exceptions defined by the user
-    - 'assert' expression
+    - 'assert' expression 
+- (22) String methods
+    - Formatting methods
+        - capitalize()
+        - upper()
+        - lower()
+        - swapcase()
+        - title()
+        - center(lenght, "caracter")
+        - ljust(lenght, "caracter")
+        - rjust(lenght, "caracter")
+        - zfill(lenght)
+    - Search methods   
+        - count()
+        - find()
+- (23) String methods
+    - Substitution methods
+        - format()
+        - replace()
+        - strip()
+        - lstrip()
+        - rstrip()
+- (24) String methods
+    - Validation Methods
+        - startswith()
+        - endswith()
+        - isalnum()
+        - isalpha()
+        - isdigit()
+        - islower()
+        - isupper()
+        - isspace()
+        - istitle()
+- (25) String methods
+    - Methods of union and division
+        - join()
+        - partition()
+        - split()
+        - splitlines()
