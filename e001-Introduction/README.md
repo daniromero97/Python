@@ -132,6 +132,30 @@
     
     age = 21    # comment in one line
     ```
+    
+
+## Data entry by console.
+
+- To capture data entered by console it is important to take into account the version of Python that we are using.
+- In Python 3 only the function input() is used, in this way we will read any data as a text string, that is to read numbers we must convert the string to type number.
+- In Python 2, input() is used for reading numbers and raw_input() for text strings.
+
+    ```
+    # Data entry by console
+    # Python 3
+    print("Write your name: ")
+    name = input()
+    print(f"Your name is: {name}")
+    print(type(name))       # type() returns the data type of the variable
+    
+    print("-----------------------")
+    print("Write your age: ")
+    age = input()
+    print(f"Your age is: {age}")
+    print(type(age))
+    age = int(age)      # With int() we casted the data to numeric type
+    print(type(age))
+    ```    
 
 
 
