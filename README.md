@@ -169,14 +169,13 @@
     - Open files
     - Opening Modes
     - Methods of file
-        - seek()
         - read()
         - readline()
         - readlines()
-        - tell()
         - write()
         - writelines()
-        - close()
+        - seek()
+        - tell()
     - File properties
         - closed
         - mode
