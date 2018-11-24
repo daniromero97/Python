@@ -75,15 +75,7 @@
     """
     ```
     
-### Methods of file
-
-##### seek()
-
-- Move the pointer to the indicated byte.
-
-    ```
-    
-    ```        
+### Methods of file    
     
 ##### read()
 
@@ -91,7 +83,14 @@
 - If the length of bytes is passed, it will read only the content up to the indicated length.
 
     ```
+    file = open("file.txt", "r")
+    print(file.read(5))
+    file.close()
     
+    """
+    output:
+        Hello
+    """
     ``` 
     
 ##### readline()
@@ -100,7 +99,20 @@
 - If the length of bytes is passed, it will read only the content up to the indicated length.
 
     ```
+    file = open("file.txt", "r")
+    print(file.readline())
+    print(file.readline())
+    print(file.readline(5))
+    file.close()
     
+    """
+    output:
+        Hello world!!!
+        
+        more lines
+        
+        more 
+    """
     ``` 
     
 ##### readlines()
@@ -109,22 +121,28 @@
 - If the length of bytes is passed, it will read only the content up to the indicated length.
 
     ```
+    file = open("file.txt", "r")
+    print(file.readlines(5))
+    print(file.readlines())
+    print(file.readlines())
+    file.close()
     
-    ```             
-##### tell()
-
-- Returns the current position of the pointer.
-
-    ```
-    
-    ```        
+    """
+    output:
+        ['Hello world!!!\n']
+        ['more lines\n', 'more lines\n', 'more lines']
+        []
+    """
+    ```      
     
 ##### write()
 
 - Write in the file.
 
     ```
-    
+    file = open("file.txt", "a")
+    file.write("\nwriting...")
+    file.close()
     ``` 
     
 ##### writelines()
@@ -132,15 +150,62 @@
 - An iterable object (as a list) is passed to it by parameter and it writes each value from line to line in the file.
 
     ```
-    
+    file = open("file.txt", "a")
+    file.writelines(["\nwrite", " lines"])
+    file.close()
     ``` 
-##### close()
+        
+##### seek()
 
-- Close a file.
+- Move the pointer to the indicated byte.
 
     ```
+    file = open("file.txt", "r")
+    print("### read 1 ###\n" + file.read())
+    print("### read 2 ###\n" + file.read())
+    file.seek(0)
+    print("### read 3 ###\n" + file.read())
+    file.close()
     
-    ```     
+    """
+    output:
+        ### read 1 ###
+        Hello world!!!
+        more lines
+        more lines
+        more lines
+        ### read 2 ###
+        
+        ### read 3 ###
+        Hello world!!!
+        more lines
+        more lines
+        more lines
+    """
+    ```    
+               
+##### tell()
+
+- Returns the current position of the pointer.
+
+    ```
+    file = open("file.txt", "r")
+    print(file.tell())
+    print(file.read(5))
+    print(file.tell())
+    print(file.readlines())
+    print(file.tell())
+    file.close()
+    
+    """
+    output:
+        0
+        Hello
+        5
+        [' world!!!\n', 'more lines\n', 'more lines\n', 'more lines']
+        47
+    """
+    ```        
     
 
 ### File properties
@@ -163,7 +228,22 @@
 
 
 ```
-                             
+file = open("file.txt", "r")
+print(file.closed)
+print(file.mode)
+print(file.name)
+print(file.encoding)
+file.close()
+print(file.closed)
+
+"""
+output:
+    False
+    r
+    file.txt
+    UTF-8
+    True
+"""                             
 ```
 
 
@@ -173,7 +253,22 @@
 
 ```
 with open("file.txt", "r") as file:
-    info = file.read()
+    print(file.read())
+
+print("\n### is closed? ###\n" + str(file.closed))
+
+"""
+output:
+    Hello world!!!
+    more lines
+    more lines
+    more lines
+    writing...
+    write lines
+    
+    ### is closed? ###
+    True
+"""
 ```
 
 - In this way we can work with a file without having to close it since at the end of the "with" block the method "close()" is invoked automatically
