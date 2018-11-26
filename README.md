@@ -183,3 +183,12 @@
         - encoding
     - Automatic closing
         - Use of "with"
+- (27) Random
+    - random()
+    - randint()
+    - randrange()
+    - choice()
+    - shuffle()
+    - sample()
+    - seed()
+    
