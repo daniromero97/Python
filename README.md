@@ -191,4 +191,72 @@
     - shuffle()
     - sample()
     - seed()
-    
+- (28) Serialization
+    - Introduction
+    - Modules
+        - marshal
+        - pickle
+        - cPickle
+        - shelve
+    - Serialization examples
+        - import
+        - dump()
+        - load()       
+- (29) Math
+    - Constants
+        - pi 
+        - e
+    - Angular conversion
+        - degrees()
+        - radians()
+    - Number-theoretic and representation functions
+        - ceil()
+        - floor()
+        - trunc()
+        - fabs()
+        - factorial()
+        - fmod()
+    - Power and logarithmic functions
+        - exp()
+        - log()
+        - log1p()
+        - log10()
+        - pow()
+        - sqrt()
+        - hypot()
+    - Trigonometric functions
+        - acos()
+        - asin()
+        - atan()
+        - cos()
+        - sin()
+        - tan()
+    - Hyperbolic functions
+        - acosh()
+        - asinh()
+        - atanh()
+        - cosh()
+        - sinh()
+        - tanh()
+- (30) Statistics
+    - Averages and measures of central location
+        - mean()
+        - harmonic_mean()
+        - median()
+        - median_low()
+        - median_high()
+        - median_grouped()
+        - mode()
+    - Measures of spread
+        - pstdev()
+        - pvariance()
+        - stdev()
+        - variance()
+- (31) Decimal
+    - Introduction
+    - prec
+    - rounding
+- (32) Fractions
+    - Introduction
+    - limit_denominator()
+    - numerator and denominator
