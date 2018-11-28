@@ -159,7 +159,13 @@ output:
 - Delete a file
 
 ```
+os.remove("/test_package/test.txt")
+print("Path is removed")
 
+"""
+output:
+    Path is removed
+"""
 ```
 
 
@@ -168,8 +174,8 @@ output:
 - Delete a directory
 
 ```
-os.remove("/test_package/test.txt")
-print("Path is removed")
+os.rmdir("/test_package/test.txt")
+print("Dir is removed")
 
 """
 output:
@@ -207,7 +213,9 @@ output:
 """
 ```
 
+##### Oficial documentation 
 
+- https://docs.python.org/3/library/os.html#os.chdir
 
 
 
