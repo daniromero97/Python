@@ -32,7 +32,7 @@ output:
 """
 ```
 
-##### date
+### date
 
 ```
 print(datetime.date.today())
@@ -51,7 +51,7 @@ output:
 """
 ```
 
-##### datetime
+### datetime
 
 ```
 print(datetime.datetime.now())
@@ -73,7 +73,7 @@ output:
 ```
 
 
-##### timedelta
+### timedelta
 
 ```
 print("weeks:", datetime.timedelta(weeks=1), "--> total seconds:",datetime.timedelta(weeks=1).total_seconds())
@@ -102,7 +102,7 @@ output:
 ```
 
 
-##### date formatting
+### date formatting
 
 ```
 print(datetime.date.today())
@@ -123,6 +123,6 @@ output:
 ```
 
 
-##### Oficial documentation
+### Oficial documentation
 
 - https://docs.python.org/3/library/datetime.html
