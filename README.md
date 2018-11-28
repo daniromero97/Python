@@ -260,3 +260,33 @@
     - Introduction
     - limit_denominator()
     - numerator and denominator
+- (33) Datetime
+    - Constants
+        - MINYEAR
+        - MAXYEAR
+    - date
+    - datetime
+    - timedelta
+    - date formatting
+- (34) Calendar
+    - weekday(year, month, day)
+    - isleap(year)
+    - leapdays(y1, y2)
+    - monthlen(year, month)
+    - prevmonth(year, month) and nextmonth(year, month)
+    - monthrange(year, month)
+    - month(year, month)
+    - calendar(year)
+- (35) Os
+    - access(path, access_mode)
+    - getcwd()
+    - chdir(new_path)
+    - chroot()
+    - chmod(path, permits)
+    - chown(path, permits)
+    - mkdir(path[, mode])
+    - mkdirs(path[, mode])
+    - remove(path)
+    - rmdir(path)
+    - removedirs(path)
+    - rename(current, new)
