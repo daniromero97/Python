@@ -101,3 +101,28 @@ output:
 """
 ```
 
+
+##### date formatting
+
+```
+print(datetime.date.today())
+print(datetime.datetime.today().strftime('%d, %b %Y'))
+print(datetime.datetime.now())
+print(datetime.datetime.now().strftime('%d, %b %Y'))
+print(datetime.datetime.now().strftime('%d/%b/%Y %H:%M:%S'))
+
+
+"""
+output:
+    2018-11-28
+    28, Nov 2018
+    2018-11-28 13:26:41.492853
+    28, Nov 2018
+    28/Nov/2018 13:26:41
+"""
+```
+
+
+##### Oficial documentation
+
+- https://docs.python.org/3/library/datetime.html

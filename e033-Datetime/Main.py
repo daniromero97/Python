@@ -78,3 +78,21 @@ output:
     microseconds: 0:00:00.000001 --> total seconds: 1e-06
     total: 8 days, 1:01:01.001001 --> total seconds: 694861.001001
 """
+
+
+print("###################### 6 ######################")
+print(datetime.date.today())
+print(datetime.datetime.today().strftime('%d, %b %Y'))
+print(datetime.datetime.now())
+print(datetime.datetime.now().strftime('%d, %b %Y'))
+print(datetime.datetime.now().strftime('%d/%b/%Y %H:%M:%S'))
+
+
+"""
+output:
+    2018-11-28
+    28, Nov 2018
+    2018-11-28 13:26:41.492853
+    28, Nov 2018
+    28/Nov/2018 13:26:41
+"""
