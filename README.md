@@ -290,3 +290,27 @@
     - rmdir(path)
     - removedirs(path)
     - rename(current, new)
+- (36) hashlib
+    - Introduction
+    - constant
+        - algorithms_guaranteed
+        - algorithms_available
+        - digest_size
+        - block_size
+    - methods
+        - update(data)
+        - digest()
+        - hexdigest()
+        - copy()
+    - SHAKE variable length digests
+- (37) secrets
+    - Introduction
+    - Random numbers
+        - choice(sequence)
+        - randbelow(n)
+        - randbits(k)
+    - Generating tokens
+        - token_bytes([nbytes=None])
+        - token_hex([nbytes=None])
+        - token_urlsafe([nbytes=None])
+        
