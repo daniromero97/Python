@@ -27,6 +27,20 @@ output:
 
 
 print("###################### 3 ######################")
+text = "Lorem ipsum dolor sit amet"
+print(text)
+print(textwrap.shorten(text, 15))
+print(textwrap.shorten(text, 15, placeholder="..."))
+
+"""
+output:
+    Lorem ipsum dolor sit amet
+    Lorem [...]
+    Lorem ipsum...
+"""
+
+
+print("###################### 4 ######################")
 text = """   Lorem 
    ipsum 
    dolor
@@ -64,7 +78,7 @@ output:
 """
 
 
-print("###################### 4 ######################")
+print("###################### 5 ######################")
 text = """Lorem 
 ipsum 
 dolor
@@ -88,18 +102,4 @@ output:
             dolor
             sit
             amet
-"""
-
-
-print("###################### 5 ######################")
-text = "Lorem ipsum dolor sit amet"
-print(text)
-print(textwrap.shorten(text, 15))
-print(textwrap.shorten(text, 15, placeholder="..."))
-
-"""
-output:
-    Lorem ipsum dolor sit amet
-    Lorem [...]
-    Lorem ipsum...
 """

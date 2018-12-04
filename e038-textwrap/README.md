@@ -38,6 +38,25 @@ output:
 ```
 
 
+##### shorten(text, width)
+
+- It allows to shorten a text.
+
+```
+text = "Lorem ipsum dolor sit amet"
+print(text)
+print(textwrap.shorten(text, 15))
+print(textwrap.shorten(text, 15, placeholder="..."))
+
+"""
+output:
+    Lorem ipsum dolor sit amet
+    Lorem [...]
+    Lorem ipsum...
+"""
+```
+
+
 ##### dedent(text)
 
 - Remove spaces or tabs at the beginning of each line of the specified text.
@@ -83,7 +102,7 @@ output:
 - The indentation must be common to each of the lines.
 
 
-### indent(text, indent)
+##### indent(text, indent)
 
 - Contrary to dedent().
 
@@ -111,25 +130,6 @@ output:
             dolor
             sit
             amet
-"""
-```
-
-
-### shorten(text, width)
-
-- It allows to shorten a text.
-
-```
-text = "Lorem ipsum dolor sit amet"
-print(text)
-print(textwrap.shorten(text, 15))
-print(textwrap.shorten(text, 15, placeholder="..."))
-
-"""
-output:
-    Lorem ipsum dolor sit amet
-    Lorem [...]
-    Lorem ipsum...
 """
 ```
 
