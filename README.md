@@ -313,4 +313,10 @@
         - token_bytes([nbytes=None])
         - token_hex([nbytes=None])
         - token_urlsafe([nbytes=None])
+- (38) textwrap
+    - wrap(text, width)
+    - fill(text, width)
+    - shorten(text, width)
+    - dedent(text)
+    - indent(text, indent)
         
