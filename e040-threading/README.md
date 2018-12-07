@@ -13,11 +13,16 @@
     - Simplifies the design of applications that perform concurrent operations.
     
 
-### Define a threads
-
-##### By constructor
+### Define a threads by constructor
 
 - Passing an invokable object to the constructor, as a function.
+
+##### current_thread(), getName(), ident, start()
+
+- current_thread() return the current Thread object, corresponding to the caller’s thread of control. 
+
+##### name, target, args and kwargs
+
 - Use of "target" to pass the name of the function and if the function has arguments we use "args" and "kwargs".
     
     ```
@@ -31,32 +36,15 @@
     
     for thread_n in range(3):
         thread = threading.Thread(
+            name='count',
             target=count,
             args=(thread_n,),
             kwargs={'from': thread_n*30,
                     'until': thread_n*30+5})
         thread.start()
-    
-    
-    """
-    output:
-        Thread name Thread-1 and identifier 140692410537728, thread number 0, number 0
-        Thread name Thread-2 and identifier 140692402145024, thread number 1, number 30
-        Thread name Thread-2 and identifier 140692402145024, thread number 1, number 31Thread name Thread-3 and identifier 140692324087552, thread number 2, number 60
-        
-        Thread name Thread-2 and identifier 140692402145024, thread number 1, number 32
-        Thread name Thread-2 and identifier 140692402145024, thread number 1, number 33
-        Thread name Thread-2 and identifier 140692402145024, thread number 1, number 34
-        Thread name Thread-1 and identifier 140692410537728, thread number 0, number 1
-        Thread name Thread-1 and identifier 140692410537728, thread number 0, number 2
-        Thread name Thread-1 and identifier 140692410537728, thread number 0, number 3
-        Thread name Thread-1 and identifier 140692410537728, thread number 0, number 4Thread name Thread-3 and identifier 140692324087552, thread number 2, number 61
-        
-        Thread name Thread-3 and identifier 140692324087552, thread number 2, number 62
-        Thread name Thread-3 and identifier 140692324087552, thread number 2, number 63
-        Thread name Thread-3 and identifier 140692324087552, thread number 2, number 64
-    """
     ```
+
+##### Daemons
 
 - Daemons (special threads), the main thread of the program may end even if one or more child threads have not completed their task.    
 - The daemon argument is assigned True when creating the Thread object or it is set with the set_daemon() method.
@@ -83,55 +71,40 @@
                              daemon=True)
     thread1.start()
     thread2.start()
-    
-    
-    """
-    output:
-        Thread name count10 and number 0
-        Thread name count10 and number 1
-        Thread name count10 and number 2
-        Thread name count10 and number 3
-        Thread name count10 and number 4Thread name count100 and number 0
-        Thread name count100 and number 1
-        Thread name count100 and number 2
-        Thread name count100 and number 3
-        Thread name count100 and number 4
-        Thread name count100 and number 5
-        Thread name count10 and number 5
-        Thread name count10 and number 6
-        Thread name count100 and number 6
-        
-        Thread name count10 and number 7
-        Thread name count100 and number 7
-        Thread name count10 and number 8
-        Thread name count10 and number 9
-    """
     ```
+
+##### join(), is_alive(), enumerate(), active_count()
 
 - Use of the join() method to make the main thread wait for the daemon thread to complete its work.
     
     ```
-    thread2.join()
+    thread.join()
     ```    
 
-- And use the isAlive() method to know if a thread is active or not.
+- And use the is_alive() method to know if a thread is active or not.
 
     ```
-    thread2.isAlive()
+    thread.is_alive()
     ```    
-    
+
+- active_count() return the number of Thread objects currently alive. 
+
+    ```
+    threading.active_count()
+    ```
+            
 - If we want to keep track of the active threads, we will use enumerate(), we must bear in mind that it also returns the main thread and it does not accept certain operations. 
 
     ```
-    def count10():
-        for i in range(10):
+    def count5():
+        for i in range(5):
             print("Thread name %s and number %d" % (
                 threading.current_thread().getName(),
                 i))
     
     for thread_n in range(0, 5):
         thread = threading.Thread(name=thread_n,
-                                   target=count10,
+                                   target=count5,
                                    daemon=True)
         thread.start()
     
@@ -147,65 +120,10 @@
             threading.active_count())
     
         thread.join()
-    
-    
-    """
-    output:
-        Thread name Thread-1 and number 0
-        Thread name 1 and number 0
-        Thread name 1 and number 1
-        Thread name 1 and number 2
-        Thread name 1 and number 3Thread name Thread-1 and number 1
-        Thread name 1 and number 4
-        Thread name 1 and number 5
-        
-        Thread name Thread-1 and number 2
-        Thread name 1 and number 6
-        Thread name Thread-1 and number 3Thread name 2 and number 0
-        Thread name 2 and number 1
-        Thread name 1 and number 7
-        Thread name 2 and number 2
-        Thread name 2 and number 3
-        Thread name 1 and number 8
-        Thread name 1 and number 9
-        Thread name 2 and number 4
-        
-        Thread name 2 and number 5
-        Thread name 2 and number 6Thread name Thread-1 and number 4
-        Thread name Thread-1 and number 5
-        
-        Thread name 2 and number 7Thread name Thread-1 and number 6
-        Thread name Thread-1 and number 7
-        
-        Thread name 2 and number 8
-        Thread name Thread-1 and number 8
-        Thread name 2 and number 9
-        Thread name Thread-1 and number 9
-        Thread name 3 and number 0
-        Thread name 3 and number 1
-        Thread name 3 and number 2
-        Thread name 4 and number 0
-        Thread name 4 and number 1
-        3 True Thread name 4 and number 2
-        Thread name 4 and number 3
-        Thread name 4 and number 4
-        Thread name 4 and number 5
-        Thread name 4 and number 6
-        Thread name 4 and number 7
-        Thread name 3 and number 3
-        True 3
-        Thread name 3 and number 4
-        Thread name 3 and number 5
-        Thread name 3 and number 6Thread name 4 and number 8
-        Thread name 4 and number 9
-        
-        Thread name 3 and number 7
-        Thread name 3 and number 8
-        Thread name 3 and number 9
-        4 True False 1
-    """
     ```   
     
+    
+### Define a threads creating a class
     
 - Creating a class that inherits from Thread in which the run () method or the __init __ () constructor is overwritten.  
 
