@@ -319,4 +319,11 @@
     - shorten(text, width)
     - dedent(text)
     - indent(text, indent)
+- (39) webbrowser
+    - Introduction
+    - functions
+        - open(url, new=0, autoraise=True)
+        - open_new(url)
+        - open_new_tab(url)
+        - get(using=None)
         
