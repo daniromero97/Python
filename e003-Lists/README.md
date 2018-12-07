@@ -100,7 +100,7 @@
         
 #### Add items
 
-- <strong> .append(values) </strong>
+- <strong> append(values) </strong>
     
     - Add a single element to the end of the list.
     
@@ -119,7 +119,7 @@
     """
     ```
     
-- <strong> .extend(values) </strong>
+- <strong> extend(values) </strong>
     
     - Concatenate lists, so if we have an empty list "empty_list = []" and we concatenate it with two elements "empty_list.extend([1, 2])", now our list has two elements.
     - Whereas if we insert "empty_list.append([1, 2])", our list will have a single element.
@@ -139,7 +139,7 @@
     """
     ```
     
-- <strong> .insert(index, values) </strong>
+- <strong> insert(index, values) </strong>
     
     - Inserts a single item in a list in a certain position.
     
@@ -167,7 +167,7 @@
     
 #### Delete items
 
-- <strong> .remove(value) </strong>
+- <strong> remove(value) </strong>
     
     - It eliminates the FIRST appearance of a value in a list, so if it appears twice it will only eliminate the first value.
     
@@ -206,7 +206,7 @@
     """
     ```
     
-- <strong> .pop() </strong>
+- <strong> pop() </strong>
     
     - Remove the last item from the list and return it.
     - You can also indicate an index.
@@ -231,7 +231,7 @@
     
 #### Search items
 
-- <strong> .index(value) </strong>
+- <strong> index(value) </strong>
     
     - Find the FIRST appearance of a value and return its index.
     
@@ -301,7 +301,7 @@
  
 #### Other functionalities
 
-- <strong> .count(value) </strong>
+- <strong> count(value) </strong>
     
     - Count how many times a value.
     
@@ -321,7 +321,7 @@
     """
     ```
     
-- <strong> .sort() </strong>
+- <strong> sort() </strong>
     
     - Sort the list.
     
@@ -339,7 +339,7 @@
     """
     ```
     
-- <strong> .reverse() </strong>
+- <strong> reverse() </strong>
     
     - Invert the list.
     
@@ -374,7 +374,7 @@
     """
     ``` 
     
-- <strong> .clear() </strong>
+- <strong> clear() </strong>
     
     - Empty the list
     

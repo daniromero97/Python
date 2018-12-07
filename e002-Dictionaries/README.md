@@ -76,7 +76,7 @@
 
 #### Functionalities
 
-- <strong> del and .pop(key) </strong>
+- <strong> del and pop(key) </strong>
     
     - allows you to delete individual elements of a dictionary by its key.
     
@@ -95,7 +95,7 @@
     
     
     
-- <strong>.clear()</strong>
+- <strong> clear() </strong>
     
     - removes all elements of a dictionary.   
  
@@ -126,7 +126,7 @@
     ```
 
 
-- <strong> .keys() </strong>
+- <strong> keys() </strong>
     
     - Returns a list with dictionary keys
     
@@ -139,7 +139,7 @@
     ```
 
 
-- <strong> .values() </strong> 
+- <strong> values() </strong> 
     
     - Returns a list with dictionary values
     
@@ -152,8 +152,8 @@
     ```
     
     
-- <strong> .copy() </strong>
-    
+- <strong> copy() </strong>
+   
     - Returns the copy of a dictionary
     ```
     dict = my_dictionary.copy()
@@ -165,7 +165,7 @@
     ```
 
 
-- <strong> .fromkeys(list, defaultValue) </strong>
+- <strong> fromkeys(list, defaultValue) </strong>
     
     - Create a new dictionary by putting the ones in the list as keys and the default values if you miss them
     ```
@@ -188,7 +188,7 @@
     ```
 
 
-- <strong> dict.update(dict2) </strong>
+- <strong> update(dict2) </strong>
     
     - Add elements from one dictionary to another
     ```

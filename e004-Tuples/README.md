@@ -30,7 +30,7 @@
 
 ### Applications
 
-##### index and in
+##### index() and in
 
 - Tuples are immutable, so you can not add, delete or modify elements.
 - You can <strong> search </strong> for items in a tuple.
@@ -47,7 +47,7 @@
     ```  
     
     
-##### len and count
+##### len and count()
     
  - You can see the <strong> length </strong> of a tuple and <strong> count </strong> how many times a value appears.
  
