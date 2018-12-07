@@ -14,14 +14,14 @@
     - Add key-value pairs and modify them
     - Mix of data types
     - Some functionalities
-        - del and .pop(key)
-        - .clear()
+        - del and pop(key)
+        - clear()
         - len
-        - .keys()
-        - .values()
-        - .copy()
-        - .fromkeys(list, defaultValue)
-        - dict.update(dict2)
+        - keys()
+        - values()
+        - copy()
+        - fromkeys(list, defaultValue)
+        - update(dict2)
 
 - (3) Lists
     - What are they?
@@ -29,15 +29,15 @@
     - Slicing
     - Shortcuts
     - Add items
-        - append
-        - extend
-        - insert
+        - append()
+        - extend()
+        - insert()
     - Delete items
-        - remove
+        - remove()
         - del
         - pop
     - Search items
-        - index
+        - index()
         - in
     - List operators
         - "+"
@@ -45,15 +45,15 @@
         - "*"
         - "*="
     - Other functionalities
-        - count
-        - reverse
+        - count()
+        - reverse()
         - min and max
-        - clear
+        - clear()
  - (4) Tuples
     - What are the tuples and comparison with lists
     - Applications
-        - index and in
-        - len and count
+        - index() and in
+        - len and count()
         - max and min
         - list and tuple
  - (5) Control Flow Statements
@@ -133,9 +133,9 @@
         - lower()
         - swapcase()
         - title()
-        - center(lenght, "caracter")
-        - ljust(lenght, "caracter")
-        - rjust(lenght, "caracter")
+        - center(lenght, char)
+        - ljust(lenght, char)
+        - rjust(lenght, char)
         - zfill(lenght)
     - Search methods   
         - count()
@@ -326,4 +326,23 @@
         - open_new(url)
         - open_new_tab(url)
         - get(using=None)
-        
+- (40) threading
+    - Introduction
+    - Define a threads by constructor
+        - current_thread(), getName(), ident, start()
+        - name, target, args and kwargs
+        - Daemons
+        - join(), is_alive(), enumerate(), active_count()
+    - Define a threads creating a class
+        - Lock Objects
+            - acquire()
+            - release()
+        - RLock Objects
+        - Condition Objects
+            - notify() and notify_all()
+        - Semaphore Objects
+        - Event Objects
+            - set(), clear() and wait()
+        - Timer Objects
+            - cancel()
+        - Barrier Objects    
