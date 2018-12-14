@@ -9,10 +9,12 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'quotesbot'
+BOT_NAME = 'main'
 
 SPIDER_MODULES = ['main.spiders']
 NEWSPIDER_MODULE = 'main.spiders'
+
+ITEM_PIPELINES = {'main.pipelines.MainPipeline': 1}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -1,20 +1,21 @@
 import scrapy
 
+from main.items import MainItem
+
 
 class AmazonSpider(scrapy.Spider):
-    name = 'test'
+    name = 'amazon'
     start_urls = [
-        'http://quotes.toscrape.com/',
+        'https://www.amazon.es/s/keywords=samsung+s8',
     ]
 
     def parse(self, response):
-        for quote in response.xpath('//div[@class="quote"]'):
+        item = MainItem()
+
+        for r in response.xpath('//span[@class="a-size-base a-color-price s-price a-text-bold"]/text()').extract():
+            item['price'] = r
+
             yield {
-                'text': quote.xpath('./span[@class="text"]/text()').extract_first(),
-                'author': quote.xpath('.//small[@class="author"]/text()').extract_first(),
-                'tags': quote.xpath('.//div[@class="tags"]/a[@class="tag"]/text()').extract()
+                'price': r
             }
 
-        next_page_url = response.xpath('//li[@class="next"]/a/@href').extract_first()
-        if next_page_url is not None:
-            yield scrapy.Request(response.urljoin(next_page_url))
