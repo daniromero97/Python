@@ -11,7 +11,7 @@ class AmazonSpider(scrapy.Spider):
 
     def parse(self, response):
         item = MainItem()
-        price_list, title_list, star_list = [], [], []
+        price_list, title_list, star_list, customer_reviews_list = [], [], [], []
 
         for r in response.xpath('//span[@class="a-size-base a-color-price s-price a-text-bold"]/text()').extract():
             price_list.append(r)
@@ -21,17 +21,23 @@ class AmazonSpider(scrapy.Spider):
             title_list.append(r)
 
         for r in response.xpath(
-                '////span/span/a/i/span[@class="a-icon-alt"]/text()').extract():
+                '//span/span/a/i/span[@class="a-icon-alt"]/text()').extract():
             star_list.append(r)
+
+        for r in response.xpath(
+                '//div[@class="a-row a-spacing-mini"]/a[@class="a-size-small a-link-normal a-text-normal"]/text()').extract():
+            customer_reviews_list.append(r)
 
         for i in range(len(price_list)):
             item['prices'] = price_list[i]
             item['titles'] = title_list[i]
             item['stars'] = star_list[i]
+            item['customer_reviews'] = customer_reviews_list[i]
 
             yield {
-                'price': item['prices'],
-                'title': item['titles'],
-                'star': item['stars']
+                'prices': item['prices'],
+                'titles': item['titles'],
+                'stars': item['stars'],
+                'customer_reviews': item['customer_reviews']
             }
 

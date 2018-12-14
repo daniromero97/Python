@@ -15,3 +15,4 @@ class MainItem(scrapy.Item):
     prices = scrapy.Field()
     titles = scrapy.Field()
     stars = scrapy.Field()
+    customer_reviews = scrapy.Field()
