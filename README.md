@@ -346,3 +346,4 @@
         - Timer Objects
             - cancel()
         - Barrier Objects    
+- (41) Web Scraping with Scrapy       
