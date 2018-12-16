@@ -5,6 +5,7 @@ from main.items import MainItem
 
 class AmazonSpider(scrapy.Spider):
     name = 'amazon'
+    allowed_domains = ['amazon.es']
     search_for1, search_for2 = 'samsung+s8', 'samsung+s9'
     start_urls = [
         'https://www.amazon.es/s/keywords='+search_for1,
