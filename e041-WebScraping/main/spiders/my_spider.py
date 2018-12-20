@@ -1,5 +1,6 @@
 import scrapy
-
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.linkextractors import LinkExtractor
 from main.items import MainItem
 
 
@@ -11,6 +12,7 @@ class AmazonSpider(scrapy.Spider):
         'https://www.amazon.es/s/keywords='+search_for1,
         'https://www.amazon.es/s/keywords='+search_for2
     ]
+
 
     def parse(self, response):
         item = MainItem()
