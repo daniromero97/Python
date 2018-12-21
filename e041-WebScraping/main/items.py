@@ -12,7 +12,10 @@ class MainItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
 
-    prices = scrapy.Field()
-    titles = scrapy.Field()
+    price = scrapy.Field()
+    title = scrapy.Field()
     stars = scrapy.Field()
     customer_reviews = scrapy.Field()
+    recommended_price = scrapy.Field()
+    RAM = scrapy.Field()
+    ROM = scrapy.Field()
