@@ -16,3 +16,6 @@ class MainItem(scrapy.Item):
     title = scrapy.Field()
     stars = scrapy.Field()
     customer_reviews = scrapy.Field()
+    recommended_price = scrapy.Field()
+    RAM = scrapy.Field()
+    ROM = scrapy.Field()

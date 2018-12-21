@@ -24,7 +24,7 @@ class MainPipeline(object):
         file = open('%s_items.csv' % spider.name, 'w+b')
         self.files[spider] = file
         self.exporter = CsvItemExporter(file)
-        self.exporter.fields_to_export = ['price', 'title', 'stars', 'customer_reviews']
+        self.exporter.fields_to_export = ['price', 'title', 'stars', 'customer_reviews', 'recommended_price', 'RAM', 'ROM']
         self.exporter.start_exporting()
 
     def spider_closed(self, spider):
