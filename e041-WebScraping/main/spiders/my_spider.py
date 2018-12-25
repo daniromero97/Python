@@ -1,15 +1,22 @@
 import scrapy
+
 from main.items import MainItem
+
+
+def pages():
+    search_for = 'samsung+s9'
+    num = 20
+    pages = []
+    for i in range(1, num):
+        pages.append('https://www.amazon.es/s/keywords=%s&page=%d' % (search_for, i))
+    return pages
 
 
 class AmazonSpider(scrapy.Spider):
     link_count = 0
     name = 'amazon'
     allowed_domains = ['amazon.es']
-    search_for = 'samsung+s9'
-    start_urls = [
-        'https://www.amazon.es/s/keywords='+search_for
-    ]
+    start_urls = pages()
 
     def parse(self, response):
         for link in response.xpath('//div[@class="a-row a-spacing-small"]/div/a/@href').extract():
