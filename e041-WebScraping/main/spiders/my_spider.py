@@ -4,12 +4,12 @@ from main.items import MainItem
 
 
 def pages():
-    search_for = 'samsung+s9'
-    num = 20
-    pages = []
-    for i in range(1, num):
-        pages.append('https://www.amazon.es/s/keywords=%s&page=%d' % (search_for, i))
-    return pages
+    search_for = 'samsung+s8'
+    number_of_pages = 2
+    list_of_pages = []
+    for i in range(1, number_of_pages+1):
+        list_of_pages.append('https://www.amazon.es/s/keywords=%s&page=%d' % (search_for, i))
+    return list_of_pages
 
 
 class AmazonSpider(scrapy.Spider):
@@ -32,6 +32,7 @@ class AmazonSpider(scrapy.Spider):
         item['recommended_price'] = response.xpath('//span[@class="a-text-strike"]/text()').extract()
         item['RAM'] = response.xpath('//tbody[1]/tr[10]/td[@class="value"]/text()').extract()
         item['ROM'] = response.xpath('//tbody[1]/tr[11]/td[@class="value"]/text()').extract()
+        item['url'] = response.request.url
 
         yield {
             'price': item['price'],
@@ -40,7 +41,8 @@ class AmazonSpider(scrapy.Spider):
             'customer_reviews': item['customer_reviews'],
             'recommended_price': item['recommended_price'],
             'RAM': item['RAM'],
-            'ROM': item['ROM']
+            'ROM': item['ROM'],
+            'url': item['url']
         }
 
 
