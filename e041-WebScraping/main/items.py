@@ -19,3 +19,4 @@ class MainItem(scrapy.Item):
     recommended_price = scrapy.Field()
     RAM = scrapy.Field()
     ROM = scrapy.Field()
+    url = scrapy.Field()
