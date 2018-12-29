@@ -74,7 +74,14 @@ for i in data["ROM"]:
 data["ROM"] = list_of_rom
 
 
+# We delete the data that does not interest us (for example, phone cases) and we only leave the mobile data
 df = data.drop(data[data.price < data["price"].mean()].index)
+
+# We order the values (descending titles and ascending prices)
+df = df.sort_values(['title', 'price'], ascending=[0, 1])
+
+
+print(df.head())
 df.to_csv("new_amazon_items.csv")
 
 
